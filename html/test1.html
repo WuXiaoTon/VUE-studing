@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本-属性填入值</title>
+    <!-- 文件夹引用VUE -->
+    <!-- <script src="../js/vue.min.js"></script> -->
+    <!-- 在线引用VUE -->
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+    <div id="site">
+        <p>a:{{a}}</p>
+        <p>b:{{b}}</p>
+        <p>sum：{{details()}}</p>
+    </div>
+</body>
+<script>
+    var data={a:"1",b:"5"};
+    var vm=new Vue({
+        el:'#site',
+        data:data  //使用已定义数据对象，引用的是相同对象
+        // {    //直接赋值
+        //     a:'3',
+        //     b:"7"
+        // }
+        ,
+        methods:{
+            details:function(){
+                return Number(this.b)+Number(this.a);
+            }
+        }
+    });
+    console.log(vm.$data)
+</script>
+</html>

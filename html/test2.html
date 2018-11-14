@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <title>模板语法</title>
+    <style>
+        .first{
+            color: violet;
+        }
+        .second{
+            color: steelblue;
+        }
+        .third{
+            color: tomato;
+        }
+        .size{
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div v-html="message"></div>
+        <!-- 颜色为属性first的值 -->
+        <p v-bind:class="first">实验一</p> 
+        <p v-bind:class="{'third':color,'size':size}">实验二</p>
+        <p>实验三</p>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            message:'<p>这有一条消息</p>',
+            first:'second',
+            color:true,
+            size:true
+        }
+    })
+</script>
+</html>
