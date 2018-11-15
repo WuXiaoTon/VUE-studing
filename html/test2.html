@@ -19,6 +19,11 @@
         .size{
             font-size:20px;
         }
+        p{
+            border-bottom: 1px solid;
+            border-bottom: 1px solid;
+            padding-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -26,8 +31,22 @@
         <div v-html="message"></div>
         <!-- 颜色为属性first的值 -->
         <p v-bind:class="first">实验一</p> 
+        <p :class="first">实验一升级版</p> 
         <p v-bind:class="{'third':color,'size':size}">实验二</p>
-        <p>实验三</p>
+        <p>实验{{1+2}}</p>
+        <p>实验{{ok?'四':'死'}}</p>
+        <p>{{message1.split('').reverse().join('')}}</p>
+        <p v-if='seen'>实验六</p>
+        <p><button v-on:click='lookon'>实验七</button></p>
+        <p><button @click='lookon'>实验七升级版</button></p>
+        <p class="first">{{la|lookon}}实验失败</p>
+    </div>
+    <div id="a" style="padding-top:10px;">
+        <input type="text" v-model="message">
+        <p>{{message}}</p>
+    </div>
+    <div>
+        <textarea name="texts" cols="30" rows="10" id="texts"></textarea>
     </div>
 </body>
 <script>
@@ -37,8 +56,34 @@
             message:'<p>这有一条消息</p>',
             first:'second',
             color:true,
-            size:true
+            size:true,
+            ok:false,  //true
+            message1:'实验五的文字',
+            seen:true,
+            la:'实验九'
+        },
+        methods:{
+            lookon:function(){
+                console.log('实验七');
+            },
+            lookon1:function(text){
+                text=text.toString();
+                return text+'qi';
+            }
         }
-    })
+    });
+    new Vue({
+        el:'#a',
+        data:{
+            message:'实验八'
+        },
+        methods:{
+        }
+    });
+    window.onload=function(){
+        var texts=document.getElementById('texts');
+        texts.value=document.getElementById('app').toString();
+        //console.log(document.getElementById('app').toString());
+    }
 </script>
 </html>
