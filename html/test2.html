@@ -39,7 +39,7 @@
         <p v-if='seen'>实验六</p>
         <p><button v-on:click='lookon'>实验七</button></p>
         <p><button @click='lookon'>实验七升级版</button></p>
-        <p class="first">{{la|lookon}}实验失败</p>
+        <p class="first" id="b">{{ la | nine }}</p>
     </div>
     <div id="a" style="padding-top:10px;">
         <input type="text" v-model="message">
@@ -51,6 +51,18 @@
 </body>
 <script>
     new Vue({
+        el:'#b',
+        data:{
+            la:"实验"
+        },
+        filters:{
+            nine:function(text){
+                text=text.toString();
+                return text+'九';
+            }
+        }
+    });
+    new Vue({
         el:'#app',
         data:{
             message:'<p>这有一条消息</p>',
@@ -59,16 +71,11 @@
             size:true,
             ok:false,  //true
             message1:'实验五的文字',
-            seen:true,
-            la:'实验九'
+            seen:true
         },
         methods:{
             lookon:function(){
                 console.log('实验七');
-            },
-            lookon1:function(text){
-                text=text.toString();
-                return text+'qi';
             }
         }
     });
