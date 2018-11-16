@@ -14,7 +14,7 @@
       1.函数中引用值为字符串，直接加为字符串拼接
 <p style="color:red;">此处引出问题：若为减会怎样</p>
 
-### [模板语法](https://github.com/WuXiaoTon/VUE-studing/blob/master/html/test2.html)
+### [2.模板语法](https://github.com/WuXiaoTon/VUE-studing/blob/master/html/test2.html)
     总结：练习了最基本的几种符号。<p>这里后续再补</p>
     发现：
         1.VUE是按顺序读的，大div里套小div时，那个id的vue先被读到，就绑定哪个VUE的
