@@ -28,4 +28,11 @@
     发现：
         1.VUE是按顺序读的，大div里套小div时，那个id的vue先被读到，就绑定哪个VUE的
         2.过滤器和方法（函数）在VUE里不是一个东西
-        
+### [3.条件语句](https://github.com/WuXiaoTon/VUE-studing/blob/master/html/test3.html)
+        总结：
+        1.v-if="属性"
+        2.v-if="属性" v-else
+        3.v-if="判断式" v-else
+        4.v-if="判断式" v-else-if="判断式" v-else
+        5.v-show="属性"
+#### 其它问题：引出了Handlebars模板引擎，未了解。
