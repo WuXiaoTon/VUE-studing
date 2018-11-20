@@ -15,6 +15,8 @@
         <p>a:{{a}}</p>
         <p>b:{{b}}</p>
         <p>sum：{{details()}}</p>
+        补充练习：
+        <p>b-a={{minus()}}</p>
     </div>
 </body>
 <script>
@@ -30,6 +32,9 @@
         methods:{
             details:function(){
                 return Number(this.b)+Number(this.a);
+            },
+            minus:function(){
+                return this.b-this.a;
             }
         }
     });
