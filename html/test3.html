@@ -6,24 +6,61 @@
 <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 </head>
 <body>
+  实验一：
 <div id="app">
-  
+  <p v-if="seen">这是个段落</p>
+  <button v-if="ok">这是个按钮</button>
 </div>
-	
+实验二：
+<div id="pro">
+  <p v-if="seen">sorry</p>
+  <p v-else>not sorry</p>
+</div>
+实验三：
+<div id="pro1">
+  <p v-if="Math.random()>0.5">sorry</p>
+  <p v-else>not sorry</p>
+</div>
+实验四：
+<div id="pro2">
+  <p v-if="type==='A'">A</p>
+  <p v-else-if="type==='B'">B</p>
+  <p v-else-if="type==='C'">C</p>
+  <p v-else>no A/B/C</p>
+</div>
+实验五:
+<div id="pro3">
+  <h1 v-show="ok">用v-show</h1>
+</div>
+</body>
 <script>
 new Vue({
   el: '#app',
   data: {
-	la: 'runoob'
-  },
-  filters: {
-    capitalize: function (value) {
-      if (!value) return ''
-      value = value.toString()
-      return value.charAt(0).toUpperCase() + value.slice(1)
-    }
+    seen:false,//true
+    ok:true
   }
-})
+});
+new Vue({
+  el:'#pro',
+  data:{
+    seen:false //true
+  }
+});
+new Vue({
+  el:'#pro1'
+});
+new Vue({
+  el:'#pro2',
+  data:{
+    type:'D'//A B C D
+  }
+});
+new Vue({
+  el:'#pro3',
+  data:{
+    ok:true //false
+  }
+});
 </script>
-</body>
 </html>
