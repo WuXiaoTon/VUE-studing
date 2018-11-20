@@ -12,7 +12,7 @@
     总结：简单使用{{}}、new VUE({})中el（填#id）、data（填键值对）、methods（函数）三个属性。
     发现：
       1.函数中引用值为字符串，直接加为字符串拼接
-此处引出问题：若为减会怎样
+#### 此处引出问题：若为减会怎样
         11.20更新：测试后证明减法为数值计算
 ### [2.模板语法](https://github.com/WuXiaoTon/VUE-studing/blob/master/html/test2.html)
     总结：练习了最基本的几种符号。
