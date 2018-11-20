@@ -15,7 +15,16 @@
 <p style="color:red;">此处引出问题：若为减会怎样</p>
 
 ### [2.模板语法](https://github.com/WuXiaoTon/VUE-studing/blob/master/html/test2.html)
-    总结：练习了最基本的几种符号。<p>这里后续再补</p>
+    总结：练习了最基本的几种符号。
+    1.v-bind:class="属性名"  简写为:class="属性名"
+    2.v-bind:class="{'值1':属性1,'值2':属性2}"
+    3.{{计算式}}
+    4.{{属性?'值1':'值2'}}
+    5.{{属性.split('').reverse().join('')}}
+    6.v-if='seen'
+    7.v-on:click='方法名'  简写为@click='方法名'
+    8.v-model="属性" {{message}}双向绑定
+    9.{{属性 | 过滤器名}}
     发现：
         1.VUE是按顺序读的，大div里套小div时，那个id的vue先被读到，就绑定哪个VUE的
         2.过滤器和方法（函数）在VUE里不是一个东西
