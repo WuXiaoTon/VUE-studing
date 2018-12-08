@@ -44,4 +44,4 @@
     4.v-for="(?,?,index) in 属性" {{index}}{{？}}{{？}}
     5.v-for="n in 4"
     注意：第五种不要忘记在js中声明Vue
-#### 其它问题：引出<template>，未了解
+#### 其它问题：引出template，未了解
