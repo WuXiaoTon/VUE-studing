@@ -36,3 +36,12 @@
     4.v-if="判断式" v-else-if="判断式" v-else
     5.v-show="属性"
 #### 其它问题：引出了Handlebars模板引擎，未了解。
+### [4.循环语句](https://github.com/WuXiaoTon/VUE-studing/blob/master/html/test4.html)
+    总结：
+    1.v-for="? in 属性" {{?.键}}
+    2.v-for="? in 属性" {{?}}
+    3.v-for="(?,?) in 属性" {{？}}{{？}}
+    4.v-for="(?,?,index) in 属性" {{index}}{{？}}{{？}}
+    5.v-for="n in 4"
+    注意：第五种不要忘记在js中声明Vue
+#### 其它问题：引出<template>，未了解
