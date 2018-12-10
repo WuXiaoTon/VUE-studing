@@ -75,6 +75,7 @@ var vm=new Vue({
       get:function(){
         return this.name+' '+this.url
       },
+      //setter
       set:function(newValue){
         var names=newValue.split(' ')
         this.name=names[0]
