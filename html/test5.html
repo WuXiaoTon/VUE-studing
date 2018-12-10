@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>计算属性</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+  实验一：
+<div id="app">
+  <p>原始：{{message}}</p>
+  <p>反转：{{reversedMessage}}</p>
+</div>
+实验二：
+<div id="app1">
+  <input type="text" v-model="message">
+  <input type="text" value={{reversemessage}}>
+  <p>{{reversemessage}}</p>
+</div>
+实验三：
+<div id="app2">
+  <input type="text" v-model="message">
+  <p>{{reversemessage}}</p>
+  <p>{{reverseMessage()}}</p>
+</div>
+实验四：
+<div id="app3">
+  <p>{{site}}</p>
+</div>
+</body>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    message:'god'
+  },
+  computed:{
+    reversedMessage:function(){
+      return this.message.split('').reverse().join('')
+    }
+  }
+});
+new Vue({
+  el:'#app1',
+  data:{message:'something'},
+  computed:{
+    reversemessage:function(){
+      return this.message.split('').reverse().join('')
+    }
+  }
+})
+new Vue({
+  el:'#app2',
+  data:{message:'god'},
+  computed:{
+    reversemessage:function(){
+      return this.message.split('').reverse().join('')
+    }
+  },
+  methods:{
+    reverseMessage:function(){
+      return this.message.split('').reverse()
+    }
+  }
+})
+var vm=new Vue({
+  el:'#app3',
+  data:{
+    name:'Baidu',
+    url:'http://www.baidu.com'
+  },
+  computed:{
+    site:{
+      //getter
+      get:function(){
+        return this.name+' '+this.url
+      },
+      set:function(newValue){
+        var names=newValue.split(' ')
+        this.name=names[0]
+        this.url=names[names.length-1]
+      }
+    }
+  }
+})
+ vm.site='哔哩哔哩 http://bilibili.com';
+ document.write('name:'+vm.name);
+ document.write('<br>');
+ document.write('url:'+vm.url);
+</script>
+</html>
