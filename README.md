@@ -53,3 +53,5 @@
     4.computed中get与set
     问题：
     1.无法双向绑定两个输入框
+    发现：
+    声明Vue可以var x=new Vue，也可以直接new Vue。
