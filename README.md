@@ -45,3 +45,11 @@
     5.v-for="n in 4"
     注意：第五种不要忘记在js中声明Vue
 #### 其它问题：引出template，未了解
+### [5.计算属性](https://github.com/WuXiaoTon/VUE-studing/blob/master/html/test5.html)
+    总结：
+    1.computed关键词
+    2.computed+双向数据绑定
+    3.computed与methods实现同一功能
+    4.computed中get与set
+    问题：
+    1.无法双向绑定两个输入框
